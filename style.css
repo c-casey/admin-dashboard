@@ -24,13 +24,59 @@ ol, ul {
 }
 
 .top-container {
-  border: 1px solid red;
+  display: grid;
+  grid-gap: 12px;
+  align-items: center;
+  grid-template-columns: 1fr 8fr 1fr 1fr max-content;
+  padding: 1rem 4rem 1rem 2rem;
+}
+
+.top-container button {
+  background-color: white;
+  border: none;
+}
+
+.top-container button:hover {
+  /* background-color:  #e8e8f0; */
+  color: orange;
+}
+
+.search {
+  width: 85%;
+  height: 1.5rem;
+  border: none;
+  border-radius: 12px;
+  background-color:  #e8e8f0;
+}
+
+.small-user-icon {
+  width: 40px;
+  background-color: lightpink;
+  border-radius: 20px;
 }
 
 .bottom-container {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 5fr 1fr 1fr 1fr;
-  /* border: 1px solid purple; */
+  grid-template-columns: 1fr 5fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem 4rem 1rem 2rem;
+  align-items: center;
+}
+
+.bottom-container button {
+  border: none;
+  color: white;
+  font-weight: 600;
+  background-color: #1e90ff;
+  border-radius: 50px;
+  padding: 12px 20px;
+  width: 100px;
+}
+
+.big-user-icon {
+  width: 80px;
+  background-color: lightpink;
+  border-radius: 40px;
 }
 
 .greeting {
@@ -96,7 +142,7 @@ ol, ul {
 .main-content {
   display: grid;
   grid-template: 1fr 1fr / 5fr 2fr;
-  background-color: #e0f0f0;
+  background-color: #e8e8f0;
   box-shadow: inset 0px 2px 4px rgba(100, 100, 100, 0.6);
 }
 
@@ -104,8 +150,12 @@ ol, ul {
   display: grid;
   grid-gap: 1rem;
   grid-row: 1 / 3;
-  grid-template-columns: 1fr 1fr;
+  grid-template: 1fr 12fr 12fr 12fr / 1fr 1fr;
   padding: 1rem;
+}
+
+.projects .title {
+  grid-column: 1 / 3;
 }
 
 .card {
@@ -127,6 +177,7 @@ ol, ul {
 
 .announcement-container {
   display: grid;
+  grid-template-rows: 1fr 9fr;
   padding: 1rem 1rem 0.5rem 0;
 }
 
@@ -139,6 +190,7 @@ ol, ul {
 
 .trending-container {
   display: grid;
+  grid-template-rows: 1fr 9fr;
   padding: 0.5rem 1rem 1rem 0;
 }
 
